@@ -1,11 +1,12 @@
+package event;
 
 
-public class Evenement {
+public class Event {
 	private String question;
 	private Answer[] answers;
 	private int type;
 	
-	public Evenement(String question, Answer[] answers, int type) {
+	public Event(String question, Answer[] answers, int type) {
 		this.question = question;
 		this.answers = answers;
 		this.type = type;

@@ -1,3 +1,4 @@
+package event;
 
 public class Answer {
 	private String choice;
