@@ -8,9 +8,9 @@ public class Main {
 	Scanner scanner = new Scanner(System.in);
 	
 	MenuMain menuMain = new MenuMain("Bienvenue sur El-Presidente", new String[] {"Démarrer une partie", "Quitter"});
-	
 	menuMain.welcome(scanner);
-	menuMain.chooseDifficulty(scanner);
 	
+	MenuMain menuDifficulty = new MenuMain("Choissisez la difficulté : ", new String[] {"Facile", "Normal", "Difficile"});
+	menuDifficulty.chooseDifficulty(scanner);
 	}
 }
