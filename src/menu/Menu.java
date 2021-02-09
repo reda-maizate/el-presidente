@@ -5,8 +5,10 @@ import java.util.Scanner;
 public class Menu {
 	private String[] choices;
 	private String title;
-
-	public Menu(String title, String[] choices) {
+	
+	public Menu() {}
+	
+	public void setterMenu(String title, String[] choices) {
 		this.title = title;
 		this.choices = choices;
 	}
