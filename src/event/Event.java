@@ -1,14 +1,17 @@
 package event;
 
-
 public class Event {
+	private int eventId;
 	private String question;
-	private Answer[] answers;
+	private int answersId;
 	private int type;
 	
-	public Event(String question, Answer[] answers, int type) {
+	public Event() {}
+	
+	public Event(int eventId, String question, int answersId, int type) {
+		this.eventId = eventId;
 		this.question = question;
-		this.answers = answers;
+		this.answersId = answersId;
 		this.type = type;
 	}
 
@@ -28,11 +31,32 @@ public class Event {
 		this.type = type;
 	}
 
-	public Answer[] getAnswers() {
-		return this.answers;
+	public int getAnswersId() {
+		return this.answersId;
 	}
 
-	public void setAnswers(Answer[] answers) {
-		this.answers = answers;
+	public void getAnswersId(int answersId) {
+		this.answersId = answersId;
+	}
+
+	public Event from(String[] s) {
+		String strEventId = s[0].strip();
+		String question = s[1].strip();
+		String strType = s[2].strip();
+
+		int eventId = Integer.parseInt(strEventId);
+		int type = Integer.parseInt(strType);
+
+		Event ev = new Event(eventId, question, eventId, type);
+
+		return ev;
+	}
+
+	public int getEventId() {
+		return this.eventId;
+	}
+
+	public void setEventId(int eventId) {
+		this.eventId = eventId;
 	}
 }

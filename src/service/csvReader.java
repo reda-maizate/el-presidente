@@ -1,23 +1,19 @@
 package service;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 
 public class csvReader {
     public String urlFile = "";
-    protected String line = "\n";
     protected String separator = ";";
 
     
-    public void csvReader(String urlFile, String line, String separator) {
-    	this.urlFile = urlFile;
-    	this.line = line;
-    	this.separator = separator;
-    }
+    public csvReader() {}
     
     public void read(String urlFile) {
-
+    	/*
         File file = new File(urlFile);
         Scanner sc;
 
@@ -28,6 +24,20 @@ public class csvReader {
             	System.out.print(sc.next());
             }
         } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        */
+    	
+    	BufferedReader reader;
+    	
+        try {
+            reader = new BufferedReader(new FileReader(urlFile));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+            reader.close();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
