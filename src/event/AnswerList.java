@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AnswerList extends ArrayList<Answer> {
+	
 	public ArrayList<Answer> answerList = new ArrayList<Answer>();
 	
 	public AnswerList(ArrayList<Answer> eventList) {
@@ -35,7 +36,7 @@ public class AnswerList extends ArrayList<Answer> {
 	@Override
 	public String toString() {
 		for(Answer a : this.answerList) {
-			System.out.println(a.getChoice());
+			System.out.println(a.getQuestion());
 		}
 		return "nope";
 	}
