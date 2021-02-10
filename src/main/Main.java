@@ -31,4 +31,6 @@ public class Main {
 	}
 	// Lancer le fichier de configuration initiale d'Island
 	}
+	
+	// TODO : Restructurer les fichiers Answer, parce qu'il contiennent des changements à réaliser sur Island.
 }

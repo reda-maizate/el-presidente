@@ -1,6 +1,6 @@
 package menu;
 
-import main.Island;
+//import main.Island;
 
 public class MenuGameConfiguration extends Menu {
 	
