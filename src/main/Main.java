@@ -3,8 +3,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+import event.AnswerList;
 import event.EventList;
 import menu.MenuDifficulty;
+import menu.MenuGameConfiguration;
 import menu.MenuMain;
 
 public class Main {
@@ -21,10 +23,19 @@ public class Main {
 	int choice_difficulty = menuDifficulty.display(scanner);
 	menuDifficulty.chooseDifficulty(choice_difficulty);
 	
+	MenuGameConfiguration menuGameConfiguration = new MenuGameConfiguration();
+	//Island island = new Island();
+	//menuGameConfiguration.configeGame();
+	
 	EventList evL = new EventList();
+	AnswerList anL = new AnswerList();
+	
 	try {
 		evL.readFrom(new File("./Data/Event/Autumn.txt"));
 		evL.toString();
+		
+		anL.readFrom(new File("./Data/Answer/AnswerAutumn.txt"));
+		anL.toString();
 	} catch (FileNotFoundException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();

@@ -10,6 +10,8 @@ public class Island {
 	private int foodUnity;
 	private int industryUnity;
 
+	public Island() {}
+
 	public Island(int pctAgriculture, int pctIndustry, int treasure, int globalSatisfaction, int difficulty, int foodUnity, int industryUnity) {
 		this.pctAgriculture = pctAgriculture;
 		this.pctIndustry = pctIndustry;

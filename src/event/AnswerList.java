@@ -6,10 +6,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AnswerList extends ArrayList<Answer> {
-	
 	public ArrayList<Answer> answerList = new ArrayList<Answer>();
+	int[] consequences;
+
 	
-	public AnswerList(ArrayList<Answer> eventList) {
+	public AnswerList(ArrayList<Answer> answerList) {
 		this.answerList = answerList;
 	}
 	
@@ -26,9 +27,10 @@ public class AnswerList extends ArrayList<Answer> {
 		Answer anCurr;
 		
 		while (scanner.hasNext()) {
-			String[] line = scanner.nextLine().split(";"); // on fait le job
+			String[] line = scanner.nextLine().split(";");
 			anCurr = an.from(line);
 			addToAnswerList(anCurr);
+			consequences = anCurr.getConsequences(line);
 		}
 		scanner.close();
 	}
@@ -36,7 +38,7 @@ public class AnswerList extends ArrayList<Answer> {
 	@Override
 	public String toString() {
 		for(Answer a : this.answerList) {
-			System.out.println(a.getQuestion());
+			System.out.println(a.getOption() + " / CON : " + consequences[2]);
 		}
 		return "nope";
 	}
