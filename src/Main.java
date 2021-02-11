@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 import menu.MenuDifficulty;
 import menu.MenuMain;
-import service.csvReader;
+import service.loadSeason;
 
 public class Main {
 	
@@ -18,7 +18,7 @@ public class Main {
 	int choice_difficulty = menuDifficulty.display(scanner);
 	menuDifficulty.chooseDifficulty(choice_difficulty);
 	*/
-	csvReader csv = new csvReader();
+	loadSeason csv = new loadSeason();
 	csv.urlFile = "./Data/Answer/AnswerAutumn.txt";
 	csv.read(csv.urlFile);
 	

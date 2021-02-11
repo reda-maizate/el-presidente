@@ -27,19 +27,7 @@ public class Main {
 	//Island island = new Island();
 	//menuGameConfiguration.configeGame();
 	
-	EventList evL = new EventList();
-	AnswerList anL = new AnswerList();
 	
-	try {
-		evL.readFrom(new File("./Data/Event/Autumn.txt"));
-		evL.toString();
-		
-		anL.readFrom(new File("./Data/Answer/AnswerAutumn.txt"));
-		anL.toString();
-	} catch (FileNotFoundException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
 	// Lancer le fichier de configuration initiale d'Island
 	}
 	
