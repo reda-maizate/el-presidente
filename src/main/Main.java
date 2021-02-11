@@ -1,10 +1,7 @@
 package main;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import event.AnswerList;
-import event.EventList;
 import menu.MenuDifficulty;
 import menu.MenuMain;
 
@@ -24,18 +21,6 @@ public class Main {
 	
 	Game game = new Game(difficulty);
 		
-	EventList evL = new EventList();
-	AnswerList anL = new AnswerList();
-	
-	try {
-		evL.readFrom(new File("./Data/Event/Autumn.txt"));
-		//evL.toString(); 
-		
-		anL.readFrom(new File("./Data/Answer/AnswerAutumn.txt"));
-		//anL.toString();
-	} catch (FileNotFoundException e) {
-		e.printStackTrace();
-	}
 	// Lancer le fichier de configuration initiale d'Island
 	}
 	
