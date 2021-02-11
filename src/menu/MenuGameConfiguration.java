@@ -8,11 +8,15 @@ public class MenuGameConfiguration extends Menu {
 		super();
 	}
 	
-	/*
+	
 	public Island configureGame() {
 		Island island = new Island();
 		
-		return;
+		
+		
+		
+		island.setGlobalSatisfaction(10);
+		return island;
 	}
-	*/
+	
 }

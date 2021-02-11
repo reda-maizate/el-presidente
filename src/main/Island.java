@@ -94,7 +94,7 @@ public class Island {
         int capitalistMember = Integer.parseInt(s[11].strip());
         int communistMember = Integer.parseInt(s[12].strip());
         int ecologistMember = Integer.parseInt(s[13].strip());
-        int liberalMember = Integer.parseInt(s14].strip());
+        int liberalMember = Integer.parseInt(s[14].strip());
         int loyalistMember = Integer.parseInt(s[15].strip());
         int militaristMember = Integer.parseInt(s[16].strip());
         int nationalistMember = Integer.parseInt(s[17].strip());
