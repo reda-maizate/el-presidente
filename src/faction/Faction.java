@@ -1,22 +1,16 @@
 package faction;
 
+import main.Island;
+
 public class Faction {
-	private String name;
 	private int approval;
 	private int member;
 	
-	public Faction(String name, int approval, int member) {
-		this.name = name;
+	public Faction() {}
+	
+	public Faction(int approval, int member) {
 		this.approval = approval;
 		this.member = member;
-	}
-
-	public String getName() {
-		return this.name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	public int getApproval() {
@@ -34,6 +28,5 @@ public class Faction {
 	public void setMember(int member) {
 		this.member = member;
 	}
-	
 	
 }

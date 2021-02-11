@@ -6,12 +6,11 @@ import java.util.Scanner;
 import event.AnswerList;
 import event.EventList;
 import menu.MenuDifficulty;
-import menu.MenuGameConfiguration;
 import menu.MenuMain;
 
 public class Main {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 	Scanner scanner = new Scanner(System.in);
 	
 	MenuMain menuMain = new MenuMain();
@@ -21,23 +20,20 @@ public class Main {
 	MenuDifficulty menuDifficulty = new MenuDifficulty();
 	menuDifficulty.setterMenu("Choissisez la difficulté :", new String[] {"Facile", "Normal", "Difficile"});
 	int choice_difficulty = menuDifficulty.display(scanner);
-	menuDifficulty.chooseDifficulty(choice_difficulty);
+	int difficulty = menuDifficulty.chooseDifficulty(choice_difficulty);
 	
-	MenuGameConfiguration menuGameConfiguration = new MenuGameConfiguration();
-	//Island island = new Island();
-	//menuGameConfiguration.configeGame();
-	
+	Game game = new Game(difficulty);
+		
 	EventList evL = new EventList();
 	AnswerList anL = new AnswerList();
 	
 	try {
 		evL.readFrom(new File("./Data/Event/Autumn.txt"));
-		evL.toString();
+		//evL.toString(); 
 		
 		anL.readFrom(new File("./Data/Answer/AnswerAutumn.txt"));
-		anL.toString();
+		//anL.toString();
 	} catch (FileNotFoundException e) {
-		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
 	// Lancer le fichier de configuration initiale d'Island

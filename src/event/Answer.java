@@ -45,27 +45,7 @@ public class Answer {
 			String strTemp = s[i].strip();
 			int temp = Integer.parseInt(strTemp);
 			consequences[i-2] = temp;
-			}
-		
-		/*String capitalistSatisfaction = s[2].strip();
-		String communistSatisfaction = s[3].strip();
-		String ecologistSatisfaction = s[4].strip();
-		String liberalSatisfaction = s[5].strip();
-		String loyalistSatisfaction = s[6].strip();
-		String militaristSatisfaction = s[7].strip();
-		String nationalistSatisfaction = s[8].strip();
-		String religiousSatisfaction = s[9].strip();
-		String pctAgriculture = s[10].strip();
-		String pctIndustry = s[11].strip();
-		String treasure = s[12].strip();
-		String capitalistMember = s[13].strip();
-		String communistMember = s[14].strip();
-		String ecologistMember = s[15].strip();
-		String liberalMember = s[16].strip();
-		String loyalistMember = s[17].strip();
-		String militaristMember = s[18].strip();
-		String nationalistMember = s[19].strip();
-		String religiousMember = s[20].strip();*/
+		}
 		
 		return consequences;
 	}

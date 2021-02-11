@@ -78,6 +78,16 @@ public class Island {
 		this.industryUnity = industryUnity;
 	}
 	
-	
+	public Island from(String[] s) {
+		int pctAgriculture = Integer.parseInt(s[8].strip());
+		int pctIndustry = Integer.parseInt(s[9].strip());
+		int treasure = Integer.parseInt(s[10].strip());
+		
+		this.pctAgriculture = pctAgriculture;
+		this.pctIndustry = pctIndustry;
+		this.treasure = treasure;
+		
+		return this;
+	}
 
 }
