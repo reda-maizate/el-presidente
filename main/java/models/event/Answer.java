@@ -1,4 +1,4 @@
-package event;
+package models.event;
 
 public class Answer {
 	private int answerId;

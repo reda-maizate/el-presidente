@@ -1,4 +1,4 @@
-package event;
+package models.event;
 
 import java.io.File;
 import java.io.FileNotFoundException;

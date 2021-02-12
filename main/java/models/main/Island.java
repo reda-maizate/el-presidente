@@ -77,7 +77,7 @@ public class Island {
 	public void setIndustryUnity(int industryUnity) {
 		this.industryUnity = industryUnity;
 	}
-	
+	/*
 	public Island from(String[] s) {
 		int pctAgriculture = Integer.parseInt(s[8].strip());
 		int pctIndustry = Integer.parseInt(s[9].strip());
@@ -89,5 +89,5 @@ public class Island {
 		
 		return this;
 	}
-
+*/
 }

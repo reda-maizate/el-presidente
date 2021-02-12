@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import menu.MenuDifficulty;
 import menu.MenuMain;
+import service.Game;
 
 public class Main {
 	

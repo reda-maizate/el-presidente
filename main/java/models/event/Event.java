@@ -1,4 +1,4 @@
-package event;
+package models.event;
 
 public class Event {
 	private int eventId;
