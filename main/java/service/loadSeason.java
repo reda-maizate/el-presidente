@@ -3,8 +3,8 @@ package service;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-import event.AnswerList;
-import event.EventList;
+import models.event.AnswerList;
+import models.event.EventList;
 
 
 public class loadSeason {

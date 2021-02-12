@@ -1,5 +1,4 @@
-package main;
-
+package models.main;
 
 public class Island {
 	private int pctAgriculture;
