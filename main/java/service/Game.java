@@ -17,6 +17,8 @@ public class Game {
 	public Game(int difficulty) throws FileNotFoundException {
 		this.difficulty = difficulty;
 		
+		GameConfig gameConfig = new GameConfig();
+		
 		this.configureGame();
 	}
 
