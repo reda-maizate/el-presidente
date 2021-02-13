@@ -11,14 +11,14 @@ public class Island {
 
 	public Island() {}
 
-	public Island(int pctAgriculture, int pctIndustry, int treasure, int globalSatisfaction, int difficulty, int foodUnity, int industryUnity) {
+	public Island(int pctAgriculture, int pctIndustry, int treasure, int globalSatisfaction, int difficulty) {
 		this.pctAgriculture = pctAgriculture;
 		this.pctIndustry = pctIndustry;
 		this.treasure = treasure;
 		this.globalSatisfaction = globalSatisfaction;
 		this.difficulty = difficulty;
-		this.foodUnity = foodUnity;
-		this.industryUnity = industryUnity;
+		this.foodUnity = 40*this.pctAgriculture;
+		this.industryUnity = 10*this.pctIndustry;
 	}
 
 	public int getPctAgriculture() {
@@ -51,7 +51,7 @@ public class Island {
 
 	public void setGlobalSatisfaction(int globalSatisfaction) {
 		if (this.globalSatisfaction > 100) {
-			
+			// launch error
 		}
 		this.globalSatisfaction = globalSatisfaction;
 	}
@@ -65,31 +65,12 @@ public class Island {
 	}
 
 	public int getFoodUnity() {
+		this.foodUnity = 40*this.pctAgriculture;
 		return this.foodUnity;
 	}
 
-	public void setFoodUnity(int foodUnity) {
-		this.foodUnity = foodUnity;
-	}
-
 	public int getIndustryUnity() {
+		this.industryUnity = 40*this.pctIndustry;
 		return this.industryUnity;
 	}
-
-	public void setIndustryUnity(int industryUnity) {
-		this.industryUnity = industryUnity;
-	}
-	/*
-	public Island from(String[] s) {
-		int pctAgriculture = Integer.parseInt(s[8].strip());
-		int pctIndustry = Integer.parseInt(s[9].strip());
-		int treasure = Integer.parseInt(s[10].strip());
-		
-		this.pctAgriculture = pctAgriculture;
-		this.pctIndustry = pctIndustry;
-		this.treasure = treasure;
-		
-		return this;
-	}
-*/
 }
