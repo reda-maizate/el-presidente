@@ -6,8 +6,8 @@ public class Answer {
 	
 	public Answer() {}
 	
-	public Answer(int answertId, String option) {
-		this.answerId = answertId;
+	public Answer(int answerId, String option) {
+		this.answerId = answerId;
 		this.option = option;
 	}
 
@@ -19,11 +19,11 @@ public class Answer {
 		this.option = option;
 	}
 	
-	public int getAnswersId() {
+	public int getAnswerId() {
 		return this.answerId;
 	}
 
-	public void getAnswersId(int answersId) {
+	public void setAnswerId(int answersId) {
 		this.answerId = answersId;
 	}
 	
@@ -46,6 +46,8 @@ public class Answer {
 			int temp = Integer.parseInt(strTemp);
 			consequences[i-2] = temp;
 		}
+		
+		//System.out.println(consequences[4]);
 		
 		return consequences;
 	}

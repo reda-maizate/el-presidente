@@ -2,6 +2,7 @@ package models.event;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -14,7 +15,8 @@ public class AnswerList extends ArrayList<Answer> {
 		this.answerList = answerList;
 	}
 	
-	public AnswerList() {
+	public AnswerList() throws IOException {
+		this.readFrom(new File("./Data/Answer/AnswerAutumn.txt"));
 	}
 	
 	public void addToAnswerList(Answer an) {
@@ -35,11 +37,14 @@ public class AnswerList extends ArrayList<Answer> {
 		scanner.close();
 	}
 	
-	@Override
-	public String toString() {
-		for(Answer a : this.answerList) {
-			System.out.println(a.getOption() + " / CON : " + consequences[2]);
+	public ArrayList<Answer> getAnswersByAnswerId(int answerId) {
+		ArrayList<Answer> answersWIthSameId = new ArrayList<Answer>();
+		for (Answer an : this.answerList) {
+			if (an.getAnswerId() == answerId) {
+				answersWIthSameId.add(an);
+			}
 		}
-		return "nope";
+		return answersWIthSameId;
 	}
+	
 }

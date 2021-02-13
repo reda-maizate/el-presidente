@@ -1,17 +1,20 @@
 package models.event;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
 public class Event {
 	private int eventId;
 	private String question;
-	private int answersId;
 	private int type;
+	private AnswerList answers;
 	
 	public Event() {}
 	
-	public Event(int eventId, String question, int answersId, int type) {
+	public Event(int eventId, String question, int type, AnswerList answers) {
 		this.eventId = eventId;
 		this.question = question;
-		this.answersId = answersId;
+		this.answers = answers;
 		this.type = type;
 	}
 
@@ -31,23 +34,26 @@ public class Event {
 		this.type = type;
 	}
 
-	public int getAnswersId() {
-		return this.answersId;
+	public AnswerList getAnswers() {
+		return this.answers;
 	}
 
-	public void getAnswersId(int answersId) {
-		this.answersId = answersId;
+	public void getAnswers(AnswerList answers) {
+		this.answers = answers;
 	}
 
-	public Event from(String[] s) {
+	public Event from(String[] s) throws IOException {
 		String strEventId = s[0].strip();
 		String question = s[1].strip();
 		String strType = s[2].strip();
-
+		
 		int eventId = Integer.parseInt(strEventId);
 		int type = Integer.parseInt(strType);
+		
+		AnswerList answers = new AnswerList();
+		answers.getAnswersByAnswerId(eventId);
 
-		Event ev = new Event(eventId, question, eventId, type);
+		Event ev = new Event(eventId, question, type, answers);
 
 		return ev;
 	}

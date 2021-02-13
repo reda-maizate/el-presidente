@@ -40,7 +40,7 @@ public class Faction {
 	}
 
 	public void addMember(int member) {
-		if (this.member > 0) {
+		if (this.member >= 0) {
 			this.member += member;
 		}
 	}

@@ -1,7 +1,7 @@
 package models.event;
 
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -13,31 +13,35 @@ public class EventList extends ArrayList<Event> {
 		this.eventList = eventList;
 	}
 	
-	public EventList() {
+	public EventList() throws IOException {
+		this.readFrom(new File("./Data/Event/Autumn.txt"));
 	}
 	
 	public void addToEventList(Event ev) {
 		this.eventList.add(ev);
 	}
 	
-	public void readFrom(File file) throws FileNotFoundException {
+	public void readFrom(File file) throws IOException {
 		Scanner scanner = new Scanner(file);
 		Event ev = new Event();
 		Event evCurr;
 		
 		while (scanner.hasNext()) {
-			String[] line = scanner.nextLine().split(";"); // on fait le job
+			String[] line = scanner.nextLine().split(";");
 			evCurr = ev.from(line);
 			addToEventList(evCurr);
 		}
 		scanner.close();
 	}
 	
-	@Override
-	public String toString() {
-		for(Event e : this.eventList) {
-			System.out.println(e.getQuestion()+ " / " + e.getEventId());
+	public ArrayList<Event> getEventsByType(int type) {
+		ArrayList<Event> eventsWithSameType = new ArrayList<Event>();
+		for (Event ev : this.eventList) {
+			if (ev.getType() == type) {
+				eventsWithSameType.add(ev);
+			}
 		}
-		return "nope";
+		return eventsWithSameType;
 	}
+	
 }

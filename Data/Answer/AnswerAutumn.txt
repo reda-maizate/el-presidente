@@ -1,4 +1,5 @@
 1;Decliner poliment au motif que vous n'avez pas les infrastructures pour eux;0;0;0;0;-15;0;0;-15;0;0;0;0;0;0;0;0;0;0;0;0
-1;Decliner au motif qu'ils ne sont pas du meme culte que vous;0;0;0;0;-30;0;0;15;0;0;0;0;0;0;0;0;0;0;0;0
+2;Decliner au motif qu'ils ne sont pas du meme culte que vous;0;0;0;0;-30;0;0;15;0;0;0;0;0;0;0;0;0;0;0;0
 1;Accepter sans condition;0;0;0;10;0;0;-20;10;0;0;0;0;0;0;0;10;0;0;-20;10
 1;Accepter sous condition d'aide financiere de la part de l'OCU;0;0;0;0;0;0;0;0;0;0;200;0;10;0;0;0;0;0;-20;0
+2;Accepter sous condition d'aide financiere de la part de l'OCU;0;0;0;0;0;0;0;0;0;0;200;0;10;0;0;0;0;0;-20;0

@@ -50,6 +50,9 @@ public class Island {
 	}
 
 	public void setGlobalSatisfaction(int globalSatisfaction) {
+		if (this.globalSatisfaction > 100) {
+			
+		}
 		this.globalSatisfaction = globalSatisfaction;
 	}
 

@@ -1,5 +1,5 @@
 package main;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 import menu.MenuDifficulty;
@@ -8,7 +8,7 @@ import service.Game;
 
 public class Main {
 	
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) throws IOException {
 	Scanner scanner = new Scanner(System.in);
 	
 	MenuMain menuMain = new MenuMain();
@@ -21,6 +21,7 @@ public class Main {
 	int difficulty = menuDifficulty.chooseDifficulty(choice_difficulty);
 	
 	Game game = new Game(difficulty);
+
 		
 	// Lancer le fichier de configuration initiale d'Island
 	}
