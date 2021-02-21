@@ -1,0 +1,2 @@
+1;En profiter pour faire augmenter le prix de l'eau;10;-15;0;0;0;0;0;-10;0;0;20;0;0;0;0;0;0;0;0;0
+1;Vous decider de puiser l'eau das votre nappe phreatique personnel pour la distribuer;-10;10;0;0;0;0;0;5;0;0;0;0;0;0;0;0;0;0;0;0
