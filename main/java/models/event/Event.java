@@ -1,7 +1,6 @@
 package models.event;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class Event {
 	private int eventId;
