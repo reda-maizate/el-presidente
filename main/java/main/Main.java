@@ -21,6 +21,12 @@ public class Main {
 	int difficulty = menuDifficulty.chooseDifficulty(choice_difficulty);
 	
 	Game game = new Game(difficulty);
+	
+	boolean endGame = false;
+	
+	while (!endGame) {
+		//Toute la partie ici
+	}
 
 		
 	// Lancer le fichier de configuration initiale d'Island

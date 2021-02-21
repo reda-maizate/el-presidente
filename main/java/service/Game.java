@@ -16,4 +16,8 @@ public class Game {
 	public void initGame() throws IOException {		
 		GameConfig gameConfig = new GameConfig();
 	}	
+	
+	/*public boolean runGame() {
+		
+	}*/
 }
